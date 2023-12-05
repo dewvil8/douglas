@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DouglasGAY</title>
+    <style>
+        body {
+            margin: 0;
+            overflow: hidden;
+            background-size: cover;
+            background-position: center;
+            text-align: center;
+        }
+
+        #pergunta {
+            font-size: 24px;
+            margin-top: 150px;
+            font-weight: bold;
+            color: black;
+        }
+
+        .botoes {
+            margin-top: 20px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .botao {
+            margin: 0 10px;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        #sim {
+            background-color: green;
+        }
+
+        #nao {
+            background-color: red;
+        }
+
+        #mensagem-errada {
+            color: red;
+            font-size: 24px;
+            margin-top: 20px;
+            display: none;
+        }
+    </style>
+</head>
+<body style="background-image: url('caminho/da/sua/imagem.jpg');">
+    <div id="pergunta">Douglas Carlos você se considera o MAIOR GAY desse universo?</div>
+
+    <div class="botoes">
+        <div id="sim" class="botao" onclick="redirecionarParaVideo()">SIM</div>
+        <div id="nao" class="botao" onclick="exibirMensagemErrada()">NÃO</div>
+    </div>
+
+    <div id="mensagem-errada">Resposta errada.<p>Desconsiderado</p> </div>
+
+    <script>
+        function redirecionarParaVideo() {
+            window.location.href = 'https://youtube.com/shorts/UXDK5l2SYCM?si=sqvqfvFJdlLrF5uq'; // Substitua pelo seu link do YouTube
+        }
+
+        function exibirMensagemErrada() {
+            var mensagemErrada = document.getElementById('mensagem-errada');
+            mensagemErrada.style.display = 'block';
+            setTimeout(function() {
+                mensagemErrada.style.display = 'none';
+            }, 3000); // A mensagem é exibida por 3 segundos, ajuste conforme necessário
+        }
+    </script>
+</body>
+</html>
